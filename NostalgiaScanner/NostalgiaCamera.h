@@ -8,13 +8,14 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+// Protocol for callback action
 @protocol NostalgiaCameraDelegate <NSObject>
 
 - (void)matchedItem;
 
 @end
 
-
+// Public interface for camera. ViewController only needs to init, start and stop.
 @interface NostalgiaCamera : NSObject
 
 -(id) initWithController: (UIViewController<NostalgiaCameraDelegate>*)c andImageView: (UIImageView*)iv;
